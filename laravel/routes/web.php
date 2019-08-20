@@ -14,5 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/helloWorld","DemoController@helloWorld");
-Route::get("/sayHello","DemoController@sayHello");
+Route::get("/quan-ly-nhan-vien","DemoController@DSNhanVien");
+Route::get("/quan-ly-san-pham","DemoController@DSSanPham");
+Route::get("/quan-ly-hoa-don","DemoController@DSHoaDon");

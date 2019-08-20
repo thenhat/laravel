@@ -25,3 +25,30 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+$factory->define(\App\SanPham::class, function (Faker $faker) {
+    return [
+        "TenSp" => $faker->name,
+        "GiaBan" => $faker->randomFloat(0,0,1000),
+        "SoLuong" => $faker->randomNumber(),
+        "Anh" => $faker->company,
+        "GhiChu" => $faker->safari,
+    ];
+});
+
+$factory->define(\App\HoaDon::class, function (Faker $faker) {
+    return [
+        "MaNV" => $faker->uuid,
+        "NgayBan" => $faker->dateTime,
+        "TongTien" => $faker->randomFloat(0,0,1000),
+    ];
+});
+
+$factory->define(\App\NhanVien::class, function (Faker $faker) {
+    return [
+        "TenNV" => $faker->name,
+        "diachi" => $faker->address,
+        "sdt" => $faker->name,
+        "namsinh" => $faker->dateTime
+    ];
+});
